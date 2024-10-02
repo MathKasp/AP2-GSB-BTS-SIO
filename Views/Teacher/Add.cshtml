@@ -1,0 +1,62 @@
+@model Teacher
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add</title>
+    </head>
+
+    <body>
+        <h1> Bienvenu dans l'espace pour ajouter un professeur </h1>
+
+        <form asp-action="Add" asp-controller="Teacher" method="post">
+
+            <div class="form-group">
+
+                <label asp-for="TeacherId"></label> 
+                <input asp-for="TeacherId" class="form-control" />
+
+                <span asp-validation-for="TeacherId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+
+                <label asp-for="FirstName"></label> 
+                <input asp-for="FirstName" class="form-control" />
+
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+
+                <label asp-for="LastName"></label> 
+                <input asp-for="LastName" class="form-control" />
+
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+
+                <label asp-for="HiringDate"></label> 
+                <input asp-for="HiringDate" class="form-control" />
+
+                <span asp-validation-for="HiringDate" class="text-danger"></span>
+            </div>
+
+            <br />
+            <br />
+
+            <input type="submit" value="Create Teacher" class="btn btn-primary" />
+        </form>
+
+        @* Permet de visualiser le resume de l'ensemble des erreurs de validation, ceci est un tag helper *@
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div>
+            <a asp-action="Index">Retour</a>
+        </div>
+    </body>
+</html>

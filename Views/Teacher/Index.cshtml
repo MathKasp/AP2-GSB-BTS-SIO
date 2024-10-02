@@ -1,0 +1,47 @@
+@model IEnumerable<Teacher>
+@{
+    <html>
+
+    <head>
+        <title>Index</title>
+    </head>
+
+    <body>
+        <h1 class="centrer">Liste des professeur</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prenom</th>
+                    <th scope="col">Details (Tag Helper) </th>
+                    <th scope="col"> Retirer un profil</th>
+                    <th scope="col"> Modifier un profil </th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var teacher in Model)
+            {
+                <tr>
+                    <td scope="row">@teacher.TeacherId</td>
+                    <td scope="row">@teacher.LastName</td>
+                    <td scope="row">@teacher.FirstName</td>
+                    <td scope="row"><a asp-action="ShowDetails" asp-route-id="@teacher.TeacherId">Détail</a></td>
+                    <td scope="row"><a asp-action="Remove" asp-route-id="@teacher.TeacherId"> Retirer</a> </td>
+                    <td scope="row"><a asp-action="Edit" asp-route-id="@teacher.TeacherId"> Modifier</a> </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
+        <div>
+            <button type="button" class="btn btn-dark">
+            <a asp-controller="Teacher" asp-action="Add" asp-controller="Teacher"> Ajouter un professeur </a>
+            </button>
+        </div>
+
+
+    </body>
+
+    </html>
+}
