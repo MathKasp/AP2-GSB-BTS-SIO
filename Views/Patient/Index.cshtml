@@ -1,0 +1,49 @@
+@model IEnumerable<Patient>
+@{
+    <html>
+
+    <head>
+        <title>Index</title>
+    </head>
+
+    <body>
+        <h1 class="centrer">Liste des patient</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prenom</th>
+                    <th scope="col">Sexe</th>
+                    <th scope="col">Details</th>
+                    <th scope="col"> Retirer un profil</th>
+                    <th scope="col"> Modifier un profil </th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var patient in Model)
+            {
+                <tr>
+                    <td></td>
+                    <td scope="row">@patient.Nom_p</td>
+                    <td scope="row">@patient.Prenom_p</td>
+                    <td scope="row">@patient.Sexe_p</td>
+                    <td scope="row"><a asp-controller="Patient" asp-action="ShowDetails" asp-route-id="@patient.PatientId">Détail</a></td>
+                    <td scope="row"><a asp-controller="Patient" asp-action="Remove" asp-route-id="@patient.PatientId"> Retirer</a> </td>
+                    <td scope="row"><a asp-controller="Patient" asp-action="Edit" asp-route-id="@patient.PatientId"> Modifier</a> </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
+        <div>
+            <button type="button" class="btn btn-dark">
+            <a asp-controller="Patient" asp-action="Add" asp-controller="Patient"> Ajouter un patient </a>
+            </button>
+        </div>
+
+
+    </body>
+
+    </html>
+}

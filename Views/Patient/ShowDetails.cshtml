@@ -1,0 +1,45 @@
+@model PatientEditViewModel
+@{
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Détails</title>
+    </head>
+
+    <body class="centrer">
+
+        <form class="centrer">
+            
+            <div class="form-group">
+                <label asp-for="Patient.PatientId"></label> <input asp-for="Patient.PatientId" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Patient.Nom_p"></label> <input asp-for="Patient.Nom_p" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Patient.Prenom_p"></label> <input asp-for="Patient.Prenom_p" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Patient.Sexe_p"></label> <input asp-for="Patient.Sexe_p" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Patient.Num_secu"></label> <input asp-for="Patient.Num_secu" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Patient.Antecedents"></label> <input asp-for="Patient.Antecedents" class="form-control" />
+            </div>            
+            <div class="form-group">
+                <label asp-for="Patient.Allergies"></label> <input asp-for="Patient.Allergies" class="form-control" />
+            </div>
+        </form>
+
+        <div class="centrer">
+            
+            <input type="button" onclick="history.back()" value="Annuler" class="btn btn-secondary" />
+        </div>
+    </body>
+
+    </html>
+}

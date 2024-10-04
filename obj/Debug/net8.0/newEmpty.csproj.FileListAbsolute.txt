@@ -126,3 +126,4 @@ C:\Users\mathk\Desktop\AP2\newEmpty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnaly
 C:\Users\mathk\Desktop\AP2\newEmpty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\mathk\Desktop\AP2\newEmpty\obj\Debug\net8.0\newEmpty.csproj.AssemblyReference.cache
 C:\Users\mathk\Desktop\AP2\newEmpty\obj\Debug\net8.0\newEmpty.csproj.Up2Date
+C:\Users\mathk\Desktop\AP2\newEmpty\obj\Debug\net8.0\newEmpty.sourcelink.json
