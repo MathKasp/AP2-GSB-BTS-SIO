@@ -1,14 +1,15 @@
 using System;
 using newEmpty.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace NewEmpty.Data;
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext : IdentityDbContext<Medecin>
 {
     public DbSet<Patient> Patients => Set<Patient>();
 
-    public DbSet<Medecin> Medecins => Set<Medecin>();
+    // public DbSet<Medecin> Medecins => Set<Medecin>();
 
     public DbSet<Allergie> Allergies => Set<Allergie>();
 
@@ -49,8 +50,15 @@ public class ApplicationDbContext : DbContext
             .UsingEntity(j => j.ToTable("MedicamentAntecedent"));
 
         modelBuilder.Entity<Ordonnance>()
+            .HasOne(a => a.Medecin)
+            .WithMany(m => m.Ordonnances)
+            .HasForeignKey(t => t.MedecinId);
+
+        modelBuilder.Entity<Ordonnance>()
             .HasOne(o => o.Patient)
             .WithMany(p => p.Ordonnances);
+
+        base.OnModelCreating(modelBuilder);
     
     }
 

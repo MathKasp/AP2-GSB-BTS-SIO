@@ -127,3 +127,13 @@ C:\Users\mathk\Desktop\AP2\newEmpty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnaly
 C:\Users\mathk\Desktop\AP2\newEmpty\obj\Debug\net8.0\newEmpty.csproj.AssemblyReference.cache
 C:\Users\mathk\Desktop\AP2\newEmpty\obj\Debug\net8.0\newEmpty.csproj.Up2Date
 C:\Users\mathk\Desktop\AP2\newEmpty\obj\Debug\net8.0\newEmpty.sourcelink.json
+C:\Users\mathk\Desktop\AP2\newEmpty\bin\Debug\net8.0\newEmpty.staticwebassets.runtime.json
+C:\Users\mathk\Desktop\AP2\newEmpty\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\mathk\Desktop\AP2\newEmpty\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\mathk\Desktop\AP2\newEmpty\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\mathk\Desktop\AP2\newEmpty\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\mathk\Desktop\AP2\newEmpty\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\mathk\Desktop\AP2\newEmpty\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\mathk\Desktop\AP2\newEmpty\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\mathk\Desktop\AP2\newEmpty\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\mathk\Desktop\AP2\newEmpty\obj\Debug\net8.0\newEmpty.MvcApplicationPartsAssemblyInfo.cs

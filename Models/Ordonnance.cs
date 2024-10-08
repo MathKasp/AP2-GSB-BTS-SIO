@@ -16,7 +16,7 @@ public class Ordonnance
     public required string Instructions_specifique {get; set;}
 
     // relations
-    public int MedecinId {get; set;}
+    public required string MedecinId {get; set;}
     public required Medecin Medecin {get; set;}
 
     public int PatientId {get; set;}

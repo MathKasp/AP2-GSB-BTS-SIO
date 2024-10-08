@@ -3,6 +3,7 @@ using newEmpty.Models;
 using NewEmpty.Data;
 using Microsoft.EntityFrameworkCore;
 using newEmpty.ViewModel;
+using System.Security.Cryptography.X509Certificates;
 
 namespace newEmpty.Controllers
 {
@@ -29,10 +30,34 @@ namespace newEmpty.Controllers
             return View();
         } 
 
-        public IActionResult Remove()
+        [HttpGet]
+        public IActionResult Remove(int id)
         {
-            return View();
+            // Avec l'id tu peux recuperer des infos du patient en base de donnees
+            Patient? patient = _context.Patients.FirstOrDefault(s => s.PatientId == id);
+
+            // ou tu peux passer directement l'id du patient  a supprimer 
+
+            return View(patient);
         } 
+
+        [HttpPost]
+        public IActionResult RemoveConfirm (int PatientId)
+        {
+
+            List<Patient> patients = new List<Patient>();
+            patients = _context.Patients.ToList();
+
+            Patient? dpatient = patients.FirstOrDefault(s => s.PatientId == PatientId); 
+
+            if (dpatient != null)
+            {
+                _context.Patients.Remove(dpatient);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return NotFound();
+        }
 
         public IActionResult Edit()
         {
