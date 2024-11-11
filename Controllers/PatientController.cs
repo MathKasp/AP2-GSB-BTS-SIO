@@ -7,8 +7,8 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace newEmpty.Controllers
 {
-    public class PatientController : Controller 
-    {        
+    public class PatientController : Controller
+    {
 
         private readonly ApplicationDbContext _context;
 
@@ -18,18 +18,47 @@ namespace newEmpty.Controllers
             _context = context;
         }
 
+        #region INDEX
         public IActionResult Index()
         {
             List<Patient> patients = new List<Patient>();
             patients = _context.Patients.ToList();
             return View(patients);
-        } 
+        }
+        #endregion
 
-        public IActionResult Add()
+
+        #region ADD
+        [HttpGet]
+        public async Task<IActionResult> Add()
         {
-            return View();
-        } 
+            var model = new PatientAddViewModel { };
 
+            model.Antecedents = await _context.Antecedents.ToListAsync();
+            model.Allergies = await _context.Allergies.ToListAsync();
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken] // Expliquer 
+        public async Task<IActionResult> AddConfirmed(PatientAddViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Patients.Add(model.Patient);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Index");
+            }
+
+            //return View(model);
+            return RedirectToAction("Add");
+        }
+        #endregion
+
+
+        #region REMOVE
         [HttpGet]
         public IActionResult Remove(int id)
         {
@@ -39,16 +68,16 @@ namespace newEmpty.Controllers
             // ou tu peux passer directement l'id du patient  a supprimer 
 
             return View(patient);
-        } 
+        }
 
         [HttpPost]
-        public IActionResult RemoveConfirm (int PatientId)
+        public IActionResult RemoveConfirm(int PatientId)
         {
 
             List<Patient> patients = new List<Patient>();
             patients = _context.Patients.ToList();
 
-            Patient? dpatient = patients.FirstOrDefault(s => s.PatientId == PatientId); 
+            Patient? dpatient = patients.FirstOrDefault(s => s.PatientId == PatientId);
 
             if (dpatient != null)
             {
@@ -58,7 +87,10 @@ namespace newEmpty.Controllers
             }
             return NotFound();
         }
+        #endregion
 
+
+        #region EDIT
         [HttpGet]
 
         public async Task<IActionResult> Edit(int id)
@@ -73,16 +105,19 @@ namespace newEmpty.Controllers
                 return NotFound();
             }
 
+            // verifier si les allergies et/ou les antecedents sont nulls 
+
             var viewModel = new PatientEditViewModel
             {
                 Patient = patient,
                 Antecedents = await _context.Antecedents.ToListAsync(),
+                Allergies = await _context.Allergies.ToListAsync(),
                 SelectedAntecedentIds = patient.Antecedents.Select(a => a.AntecedentId).ToList() ?? new List<int>(),
                 SelectedAllergieIds = patient.Allergies.Select(a => a.AllergieId).ToList() ?? new List<int>()
             };
-         
+
             return View(viewModel);
-        } 
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken] // Expliquer 
@@ -157,27 +192,30 @@ namespace newEmpty.Controllers
 
             viewModel.Antecedents = await _context.Antecedents.ToListAsync();
             viewModel.Allergies = await _context.Allergies.ToListAsync();
-            return View(viewModel);            
+            return View(viewModel);
         }
+
         private bool PatientExists(int id)
         {
             return _context.Patients.Any(e => e.PatientId == id);
         }
+        #endregion
 
-        // ShowDetail fonctionne => juste modifier l'affichage des listes ordonnances / antécédents
-        public IActionResult ShowDetails(int id) 
+
+        #region SHOWDETAIL
+        public IActionResult ShowDetails(int id)
         {
             Patient? patient = _context.Patients
                 .Include(p => p.Allergies)
-                .Include(p=> p.Antecedents)
-                .FirstOrDefault (p => p.PatientId == id);
+                .Include(p => p.Antecedents)
+                .FirstOrDefault(p => p.PatientId == id);
 
             if (patient == null)
             {
                 return NotFound();
             }
 
-            var vm = new PatientEditViewModel                       // CREATION DUN PATIENTVIEWMODEL
+            var viewmodel = new PatientEditViewModel 
             {
                 Patient = patient,
                 Antecedents = _context.Antecedents.ToList(),
@@ -186,8 +224,11 @@ namespace newEmpty.Controllers
                 SelectedAllergieIds = patient.Allergies.Select(a => a.AllergieId).ToList() ?? new List<int>()
             };
 
-            return View(vm);
+            return View(viewmodel);
         }
         //
+        #endregion
+
+
     }
 }

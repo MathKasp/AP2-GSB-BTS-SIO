@@ -1,0 +1,32 @@
+@model Allergie
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Retirer un allergie</title>
+
+    </head>
+
+    <body>
+        <h1 class="centrer"> Etes vous certain de vouloir retirer cette Allergie ? </h1>
+        
+        <form asp-controller="Allergie" asp-action="RemoveConfirm" method="post" class="centrer">
+
+            <input asp-for="AllergieId" type="hidden" />
+            <div class="form-group">
+                <label asp-for="@Model.Nom_Allergie"></label> <input asp-for="@Model.Nom_Allergie" class="form-control" />
+            </div>
+
+            <div class="centrer">            
+                <input type="submit" value="retirer cet élément" class="btn btn-danger" />
+                <input type="button" onclick="history.back()" value="Non je ne veut plus" class="btn btn-secondary" />
+            </div>
+        </form>
+
+    </body>
+
+</html>

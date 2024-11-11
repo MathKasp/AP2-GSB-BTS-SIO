@@ -26,6 +26,46 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Allergie/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Allergie/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Allergie/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Allergie/Remove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVcUmVtb3ZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Allergie/ShowDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVcU2hvd0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Antecedent/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW50ZWNlZGVudFxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Antecedent/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW50ZWNlZGVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Antecedent/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW50ZWNlZGVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Antecedent/Remove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW50ZWNlZGVudFxSZW1vdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Antecedent/ShowDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW50ZWNlZGVudFxTaG93RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/mathk/Desktop/AP2/newEmpty/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,14 +92,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/mathk/Desktop/AP2/newEmpty/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Student/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Student/ShowDetails.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxTaG93RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/mathk/Desktop/AP2/newEmpty/Views/Teacher/Add.cshtml]

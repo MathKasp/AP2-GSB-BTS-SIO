@@ -9,8 +9,10 @@ public class Patient
     public int PatientId {get; set;}
 
     [Display(Name = "Nom")]
+    [Required(ErrorMessage = "Le patient doit posséder un Nom")]
     public required string Nom_p { get; set; }
 
+    [Required(ErrorMessage = "Le patient doit posséder un Prénom")]
     [Display(Name = "Prénom")]
     public required string Prenom_p { get; set; }
 
@@ -18,6 +20,7 @@ public class Patient
     public required string Sexe_p { get; set; }
 
     [Display(Name = "Numéro de sécurité")]
+    [Required(ErrorMessage = "Le patient doit posséder un Numéro de sécurité")]
     public required string Num_secu { get; set; }
 
     // relations

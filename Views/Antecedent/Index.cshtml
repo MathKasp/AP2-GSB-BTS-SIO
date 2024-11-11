@@ -1,0 +1,45 @@
+@model IEnumerable<Antecedent>
+@{
+    <html>
+
+    <head>
+        <title>Index</title>
+    </head>
+
+    <body>
+        <h1 class="centrer">Gestions des antecedents</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th scope="col">Antecedent</th>
+                    <th scope="col">Details</th>
+                    <th scope="col"> Retirer un antecedent</th>
+                    <th scope="col"> Modifier un antecedent </th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var antecedent in Model)
+            {
+                <tr>
+                    <td></td>
+                    <td scope="row">@antecedent.Nom_Antecedent</td>
+                    <td scope="row"><a asp-controller="Antecedent" asp-action="ShowDetails" asp-route-id="@antecedent.AntecedentId">Détail</a></td>
+                    <td scope="row"><a asp-controller="Antecedent" asp-action="Remove" asp-route-id="@antecedent.AntecedentId"> Retirer</a> </td>
+                    <td scope="row"><a asp-controller="Antecedent" asp-action="Edit" asp-route-id="@antecedent.AntecedentId"> Modifier</a> </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
+        <div>
+            <button type="button" class="btn btn-dark">
+            <a asp-controller="Antecedent" asp-action="Add"> Ajouter un antecedent </a>
+            </button>
+        </div>
+
+
+    </body>
+
+    </html>
+}

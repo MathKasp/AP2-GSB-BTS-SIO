@@ -4,9 +4,9 @@ using newEmpty.Models;
 
 namespace newEmpty.ViewModel;
 
-public class PatientEditViewModel
+public class PatientAddViewModel
 {
-    public required Patient? Patient { get; set; }
+    public Patient? Patient { get; set; }
     public List<Antecedent>? Antecedents { get; set; }
     public List<Allergie>? Allergies { get; set; }
     public List<int> SelectedAntecedentIds { get; set; } = new List<int>();
