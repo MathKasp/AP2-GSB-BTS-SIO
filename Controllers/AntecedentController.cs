@@ -46,6 +46,18 @@ namespace newEmpty.Controllers
         {
             if (ModelState.IsValid)
             {
+                model.Antecedent.Medicaments.Clear();
+                if (model.SelectedMedicamentIds != null)
+                {
+                    var selectedMedicaments = await _context.Medicaments
+                        .Where(a => model.SelectedMedicamentIds.Contains(a.MedicamentId))
+                        .ToListAsync();
+                    foreach (var medicament in selectedMedicaments)
+                    {
+                        model.Antecedent.Medicaments.Add(medicament);
+                    }
+                }
+                
                 _context.Antecedents.Add(model.Antecedent);
                 await _context.SaveChangesAsync();
 

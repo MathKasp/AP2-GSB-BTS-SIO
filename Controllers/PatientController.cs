@@ -18,7 +18,7 @@ namespace newEmpty.Controllers
         {
             _context = context;
         }
-        
+
         [Authorize]
 
         #region INDEX
@@ -49,6 +49,28 @@ namespace newEmpty.Controllers
         {
             if (ModelState.IsValid)
             {
+                model.Patient.Allergies.Clear();
+                if (model.SelectedAllergieIds != null)
+                {
+                    var selectedAllergies = await _context.Allergies
+                        .Where(a => model.SelectedAllergieIds.Contains(a.AllergieId))
+                        .ToListAsync();
+                    foreach (var allergie in selectedAllergies)
+                    {
+                        model.Patient.Allergies.Add(allergie);
+                    }
+                }
+                model.Patient.Antecedents.Clear();
+                if (model.SelectedAntecedentIds != null)
+                {
+                    var selectedAntecedents = await _context.Antecedents
+                        .Where(a => model.SelectedAntecedentIds.Contains(a.AntecedentId))
+                        .ToListAsync();
+                    foreach (var antecedent in selectedAntecedents)
+                    {
+                        model.Patient.Antecedents.Add(antecedent);
+                    }
+                }
                 _context.Patients.Add(model.Patient);
                 await _context.SaveChangesAsync();
 
@@ -218,7 +240,7 @@ namespace newEmpty.Controllers
                 return NotFound();
             }
 
-            var viewmodel = new PatientViewModel 
+            var viewmodel = new PatientViewModel
             {
                 Patient = patient,
                 Antecedents = _context.Antecedents.ToList(),

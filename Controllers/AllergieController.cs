@@ -46,6 +46,17 @@ namespace newEmpty.Controllers
         {
             if (ModelState.IsValid)
             {
+                model.Allergie.Medicaments.Clear();
+                if (model.SelectedMedicamentIds != null)
+                {
+                    var selectedMedicaments = await _context.Medicaments
+                        .Where(a => model.SelectedMedicamentIds.Contains(a.MedicamentId))
+                        .ToListAsync();
+                    foreach (var medicament in selectedMedicaments)
+                    {
+                        model.Allergie.Medicaments.Add(medicament);
+                    }
+                }
                 _context.Allergies.Add(model.Allergie);
                 await _context.SaveChangesAsync();
 
