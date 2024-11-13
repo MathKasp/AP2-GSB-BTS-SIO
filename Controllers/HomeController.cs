@@ -1,10 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace newEmpty.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: HomeController
+        [Authorize]
         public IActionResult Index()
         {
             return View();
@@ -12,3 +13,7 @@ namespace newEmpty.Controllers
 
     }
 }
+
+// TO FIX
+
+// Add fonctionne mais ne tien pas antécédent + allergies

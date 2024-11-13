@@ -8,6 +8,7 @@
 
     <body>
         <h1 class="centrer">Gestions des antecedents</h1>
+
         <table class="table">
             <thead>
                 <tr>
@@ -23,7 +24,7 @@
             {
                 <tr>
                     <td></td>
-                    <td scope="row">@antecedent.Nom_Antecedent</td>
+                    <td scope="row" class="text_search">@antecedent.Nom_Antecedent</td>
                     <td scope="row"><a asp-controller="Antecedent" asp-action="ShowDetails" asp-route-id="@antecedent.AntecedentId">Détail</a></td>
                     <td scope="row"><a asp-controller="Antecedent" asp-action="Remove" asp-route-id="@antecedent.AntecedentId"> Retirer</a> </td>
                     <td scope="row"><a asp-controller="Antecedent" asp-action="Edit" asp-route-id="@antecedent.AntecedentId"> Modifier</a> </td>
@@ -37,7 +38,6 @@
             <a asp-controller="Antecedent" asp-action="Add"> Ajouter un antecedent </a>
             </button>
         </div>
-
 
     </body>
 

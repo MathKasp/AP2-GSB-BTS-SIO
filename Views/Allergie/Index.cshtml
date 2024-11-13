@@ -8,6 +8,7 @@
 
     <body>
         <h1 class="centrer">Gestions des allergies</h1>
+
         <table class="table">
             <thead>
                 <tr>
@@ -19,25 +20,27 @@
                 </tr>
             </thead>
             <tbody>
-            @foreach (var allergie in Model)
-            {
-                <tr>
-                    <td></td>
-                    <td scope="row">@allergie.Nom_Allergie</td>
-                    <td scope="row"><a asp-controller="Allergie" asp-action="ShowDetails" asp-route-id="@allergie.AllergieId">Détail</a></td>
-                    <td scope="row"><a asp-controller="Allergie" asp-action="Remove" asp-route-id="@allergie.AllergieId"> Retirer</a> </td>
-                    <td scope="row"><a asp-controller="Allergie" asp-action="Edit" asp-route-id="@allergie.AllergieId"> Modifier</a> </td>
-                </tr>
-            }
+                @foreach (var allergie in Model)
+                {
+                    <tr>
+                        <td></td>
+                        <td scope="row" class="text_search">@allergie.Nom_Allergie</td>
+                        <td scope="row"><a asp-controller="Allergie" asp-action="ShowDetails"
+                                asp-route-id="@allergie.AllergieId">Détail</a></td>
+                        <td scope="row"><a asp-controller="Allergie" asp-action="Remove" asp-route-id="@allergie.AllergieId">
+                                Retirer</a> </td>
+                        <td scope="row"><a asp-controller="Allergie" asp-action="Edit" asp-route-id="@allergie.AllergieId">
+                                Modifier</a> </td>
+                    </tr>
+                }
             </tbody>
         </table>
 
         <div>
             <button type="button" class="btn btn-dark">
-            <a asp-controller="Allergie" asp-action="Add"> Ajouter un allergie </a>
+                <a asp-controller="Allergie" asp-action="Add"> Ajouter un allergie </a>
             </button>
         </div>
-
 
     </body>
 

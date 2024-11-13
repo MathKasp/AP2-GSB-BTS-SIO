@@ -25,7 +25,7 @@
 
   <div class="form-group row">
     <div class="col-sm-10 offset-sm-2">
-      <div class="form-check <input asp-for="RememberMe" class="form-check
+      <div class="form-check <input asp-for="RememberMe" class="form-check">
       <label class="form-check label" asp-for="RememberMe">Se Souvenir ? </label>
       <span asp-validation-for="RememberMe" class="text-danger"></span>
     </div>
@@ -35,5 +35,11 @@
   <br />
 
   <input type="submit" value="Login" class="btn btn-primary" />
+
+  <br />
+
+  <a asp-controller="Account" asp-action="Register">Créer un compte</a>
+
+
 
 </form>

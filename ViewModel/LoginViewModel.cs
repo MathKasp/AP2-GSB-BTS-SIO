@@ -3,10 +3,6 @@ namespace newEmpty.ViewModel;
 
 public class LoginViewModel
 {
-
-    [Required(ErrorMessage = "Le mail est requis")]
-    public required string Email {get; set;}
-
     [Required(ErrorMessage = "L'identifiant est requis")]
     public required string UserName { get; set; }
 

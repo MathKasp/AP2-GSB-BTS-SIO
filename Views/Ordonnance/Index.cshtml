@@ -1,0 +1,78 @@
+@model IEnumerable<Ordonnance>
+@{
+    <html>
+
+    <head>
+        <title>Index</title>
+    </head>
+
+    <body>
+        <h1 class="centrer">Gestions des ordonnances</h1>
+
+        <input type="text" id="EntreeRecherche" placeholder="Rechercher... ">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th scope="col">Patient</th>
+                    <th scope="col">Details de l'ordonnance</th>
+                    <th scope="col"> Retirer une ordonnance</th>
+                    <th scope="col"> Modifier une ordonnance </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var ordonnance in Model)
+                {
+                    <tr class="element">
+                        <td></td>
+                        <td scope="row" class="text_search">@ordonnance.Patient.Nom_p @ordonnance.Patient.Prenom_p </td>
+
+                        <td scope="row"><a asp-controller="Ordonnance" asp-action="ShowDetails"
+                                asp-route-id="@ordonnance.OrdonnanceId">
+                                Détail</a></td>
+
+                        <td scope="row"><a asp-controller="Ordonnance" asp-action="Remove" asp-route-id="@ordonnance.OrdonnanceId">
+                                Retirer</a> </td>
+
+                        <td scope="row"><a asp-controller="Ordonnance" asp-action="Edit" asp-route-id="@ordonnance.OrdonnanceId">
+                                Modifier</a> </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div>
+            <button type="button" class="btn btn-dark">
+                <a asp-controller="Ordonnance" asp-action="Add"> Ajouter une ordonnance </a>
+            </button>
+        </div>
+
+
+
+        <script>
+            document.getElementById('EntreeRecherche').addEventListener('keyup', function () {
+
+                var texteRecherche = this.value.toLowerCase();
+                var patientElement = document.querySelectorAll('.element');
+
+                patientElement.forEach(function (card) {
+                    var nomPatient = card.querySelector('.text_search').textContent.toLowerCase();
+                    if (nomPatient.includes (texteRecherche)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+
+        </script>
+    </body>
+
+
+
+    </html>
+
+
+}

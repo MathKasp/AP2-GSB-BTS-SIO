@@ -1,0 +1,61 @@
+@{
+}
+@model OrdonnanceViewModel
+
+<h1>Créer une nouvelle ordonnance</h1>
+
+<form asp-action="Add" asp-controller="Ordonnance" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+ <input type="hidden" asp-for="OrdonnanceId" />
+
+    <div class="form-group">
+        <label asp-for="Posologie"></label> <input asp-for="Posologie" class="form-control" />
+        <span asp-validation-for="Posologie" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Duree_traitement"></label> <input asp-for="Duree_traitement" class="form-control"/>
+        <span asp-validation-for="Duree_traitement" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Instructions_specifique"></label> <input asp-for="Instructions_specifique"
+            class="form-control" />
+        <span asp-validation-for="Instructions_specifique" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PatientId"></label>
+        <select asp-for="PatientId" class="form-control">
+            <option value="" >Sélectionné le patient</option>
+            @foreach (var pat in Model.Patients)
+            {
+                    <option value="@pat.PatientId">@pat.Nom_p @pat.Prenom_p </option>
+            }
+        </select>
+        <span asp-validation-for="PatientId" class="text-danger"></span>
+    </div>
+
+    <div>Medicaments</div>
+
+    <div class="form-group">
+        @foreach (var med in Model.Medicaments)
+        {
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="SelectedMedicamentId" value="@med.MedicamentId"
+                @(Model.SelectedMedicamentId != null && Model.SelectedMedicamentId.Contains(med.MedicamentId) ?
+                        "checked" : "") />
+                    <label class="form-check-label">@med.Nom_med</label>
+                </div>
+        }
+    </div>
+
+
+
+    <br />
+    <input type="submit" value="Créer une ordonnance" class="btn btn-primary" />
+</form>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Retour à la liste</a>
+</div>

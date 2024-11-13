@@ -3,6 +3,7 @@ using newEmpty.Models;
 using NewEmpty.Data;
 using Microsoft.EntityFrameworkCore;
 using newEmpty.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace newEmpty.Controllers
@@ -15,6 +16,8 @@ namespace newEmpty.Controllers
         {
             _context = context;
         }
+
+        [Authorize]
 
         #region INDEX
         public IActionResult Index()

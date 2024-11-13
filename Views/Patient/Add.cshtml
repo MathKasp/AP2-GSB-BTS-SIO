@@ -1,4 +1,4 @@
-@model PatientAddViewModel
+@model PatientViewModel
 
 <!DOCTYPE html>
 <html lang="en">
@@ -89,9 +89,6 @@
     @* Permet de visualiser le resume de l'ensemble des erreurs de validation, ceci est un tag helper *@
     <div asp-validation-summary="All" class="text-danger"></div>
 
-    <div>
-        <a asp-action="Index">Retour</a>
-    </div>
 </body>
 
 </html>

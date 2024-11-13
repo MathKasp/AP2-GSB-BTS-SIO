@@ -4,6 +4,7 @@ using NewEmpty.Data;
 using Microsoft.EntityFrameworkCore;
 using newEmpty.ViewModel;
 using System.Security.Cryptography.X509Certificates;
+using Microsoft.AspNetCore.Authorization;
 
 namespace newEmpty.Controllers
 {
@@ -17,6 +18,8 @@ namespace newEmpty.Controllers
         {
             _context = context;
         }
+        
+        [Authorize]
 
         #region INDEX
         public IActionResult Index()
@@ -32,7 +35,7 @@ namespace newEmpty.Controllers
         [HttpGet]
         public async Task<IActionResult> Add()
         {
-            var model = new PatientAddViewModel { };
+            var model = new PatientViewModel { };
 
             model.Antecedents = await _context.Antecedents.ToListAsync();
             model.Allergies = await _context.Allergies.ToListAsync();
@@ -42,7 +45,7 @@ namespace newEmpty.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken] // Expliquer 
-        public async Task<IActionResult> AddConfirmed(PatientAddViewModel model)
+        public async Task<IActionResult> AddConfirmed(PatientViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -107,7 +110,7 @@ namespace newEmpty.Controllers
 
             // verifier si les allergies et/ou les antecedents sont nulls 
 
-            var viewModel = new PatientEditViewModel
+            var viewModel = new PatientViewModel
             {
                 Patient = patient,
                 Antecedents = await _context.Antecedents.ToListAsync(),
@@ -121,7 +124,7 @@ namespace newEmpty.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken] // Expliquer 
-        public async Task<IActionResult> Edit(int id, PatientEditViewModel viewModel)
+        public async Task<IActionResult> Edit(int id, PatientViewModel viewModel)
         {
             if (id != viewModel.Patient.PatientId)
             {
@@ -215,7 +218,7 @@ namespace newEmpty.Controllers
                 return NotFound();
             }
 
-            var viewmodel = new PatientEditViewModel 
+            var viewmodel = new PatientViewModel 
             {
                 Patient = patient,
                 Antecedents = _context.Antecedents.ToList(),

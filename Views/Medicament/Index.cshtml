@@ -1,4 +1,4 @@
-@model IEnumerable<Patient>
+@* @model IEnumerable<Medicament>
 @{
     <html>
 
@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="centrer">Gestions des patient</h1>
+        <h1 class="centrer">Gestions des medicament</h1>
 
         <input type="text" id="EntreeRecherche" placeholder="Rechercher... ">
 
@@ -15,25 +15,25 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th scope="col">Nom - Prénom</th>
-                    <th scope="col">Sexe</th>
+                    <th scope="col">Medicament</th>
                     <th scope="col">Details</th>
                     <th scope="col"> Retirer un profil</th>
                     <th scope="col"> Modifier un profil </th>
                 </tr>
             </thead>
+
             <tbody>
-                @foreach (var patient in Model)
+                @foreach (var medicament in Model)
                 {
                     <tr class="element">
                         <td></td>
-                        <td scope="row" class="text_search">@patient.Nom_p - @patient.Prenom_p</td>
-                        <td scope="row">@patient.Sexe_p</td>
-                        <td scope="row"><a asp-controller="Patient" asp-action="ShowDetails"
-                                asp-route-id="@patient.PatientId">Détail</a></td>
-                        <td scope="row"><a asp-controller="Patient" asp-action="Remove" asp-route-id="@patient.PatientId">
+                        <td scope="row" class="text_search">@medicament.Nom_med</td> 
+                        
+                        <td scope="row"><a asp-controller="Medicament" asp-action="ShowDetails" asp-route-id="@medicament.MedicamentId">
+                                Détail</a></td>
+                        <td scope="row"><a asp-controller="Medicament" asp-action="Remove" asp-route-id="@medicament.MedicamentId">
                                 Retirer</a> </td>
-                        <td scope="row"><a asp-controller="Patient" asp-action="Edit" asp-route-id="@patient.PatientId">
+                        <td scope="row"><a asp-controller="Medicament" asp-action="Edit" asp-route-id="@medicament.MedicamentId">
                                 Modifier</a> </td>
                     </tr>
                 }
@@ -42,9 +42,12 @@
 
         <div>
             <button type="button" class="btn btn-dark">
-                <a asp-controller="Patient" asp-action="Add"> Ajouter un patient </a>
+                <a asp-controller="Medicament" asp-action="Add"> Ajouter un médicament </a>
             </button>
         </div>
+
+
+
         <script>
             document.getElementById('EntreeRecherche').addEventListener('keyup', function () {
 
@@ -52,8 +55,8 @@
                 var Element = document.querySelectorAll('.element');
 
                 Element.forEach(function (card) {
-                    var nomPatient = card.querySelector('.text_search').textContent.toLowerCase(); //case a rechercher
-                    if (nomPatient.includes(texteRecherche)) {
+                    var mednom = card.querySelector('.text_search').textContent.toLowerCase(); //case a rechercher
+                    if (mednom.includes (texteRecherche)) {
                         card.style.display = '';
                     } else {
                         card.style.display = 'none';
@@ -69,4 +72,4 @@
     </html>
 
 
-}
+} *@
