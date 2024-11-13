@@ -1,4 +1,4 @@
-@model Patient
+@model Ordonnance
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,24 +7,16 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Retirer un patient</title>
+        <title>Retirer une Ordonnance</title>
 
     </head>
 
     <body>
-        <h1 class="centrer"> Etes vous certain de vouloir retirer ce Patient ? </h1>
+        <h1 class="centrer"> Etes vous certain de vouloir retirer cette Ordonnance ? </h1>
         
         <form asp-action="RemoveConfirm" method="post" class="centrer">
 
-            <input asp-for="PatientId" type="hidden" />
-            <div class="form-group">
-                <label asp-for="@Model.Nom_p"></label> <input asp-for="@Model.Nom_p" class="form-control" />
-            </div>
-            <div class="form-group">
-                <label asp-for="@Model.Prenom_p"></label> <input asp-for="@Model.Prenom_p" class="form-control" />
-            </div>
-
-            <br>
+            <input asp-for="OrdonnanceId" type="hidden" />
 
             <div class="centrer">            
                 <input type="submit" value="Oui je veut retirer cet élément" class="btn btn-danger" />

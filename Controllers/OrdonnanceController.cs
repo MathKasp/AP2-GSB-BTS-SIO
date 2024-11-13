@@ -350,6 +350,65 @@ namespace newEmpty.Controllers
         {
             return _context.Ordonnances.Any(e => e.OrdonnanceId == id);
         }
+        #endregion
+
+        #region SHOWDETAIL
+        public IActionResult ShowDetails(int id)
+        {
+            Ordonnance? ordonnance = _context.Ordonnances
+                .Include(p => p.Medicaments)
+                .Include(p => p.Medecin)
+                .Include(p => p.Patient)
+                .FirstOrDefault(p => p.OrdonnanceId == id);
+
+            if (ordonnance == null)
+            {
+                return NotFound();
+            }
+
+            var viewmodel = new OrdonnanceViewModel
+            {
+                OrdonnanceId = ordonnance.OrdonnanceId,
+                Posologie = ordonnance.Posologie,
+                Duree_traitement = ordonnance.Duree_traitement,
+                Instructions_specifique = ordonnance.Instructions_specifique,
+                PatientId = ordonnance.PatientId,
+                Patient = ordonnance.Patient,
+                Medecin = ordonnance.Medecin,
+                Medicaments = _context.Medicaments.ToList(),
+                SelectedMedicamentId = ordonnance.Medicaments.Select(a => a.MedicamentId).ToList() ?? new List<int>()
+            };
+
+            return View(viewmodel);
+        }
+        //
+        #endregion
+
+        #region REMOVE
+        [HttpGet]
+        public async Task<IActionResult> Remove(int id)
+        {
+            Ordonnance? ordonnance = _context.Ordonnances.FirstOrDefault(s => s.OrdonnanceId == id);
+            return View(ordonnance);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken] // si déconnecté il refuse l'action
+        public async Task<IActionResult> RemoveConfirm(int OrdonnanceId)
+        {
+            List<Ordonnance> ordonnances = new List<Ordonnance>();
+            ordonnances = _context.Ordonnances.ToList();
+
+            Ordonnance? ordonnance = ordonnances.FirstOrDefault(s => s.OrdonnanceId == OrdonnanceId);
+
+            if (ordonnance != null)
+            {
+                _context.Ordonnances.Remove(ordonnance);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return NotFound();
+        }
         #endregion 
     }
 }

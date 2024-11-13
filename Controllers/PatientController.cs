@@ -98,7 +98,6 @@ namespace newEmpty.Controllers
         [HttpPost]
         public IActionResult RemoveConfirm(int PatientId)
         {
-
             List<Patient> patients = new List<Patient>();
             patients = _context.Patients.ToList();
 

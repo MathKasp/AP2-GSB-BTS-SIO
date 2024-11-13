@@ -106,6 +106,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3Jkb25uYW5jZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Ordonnance/Remove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3Jkb25uYW5jZVxSZW1vdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Ordonnance/ShowDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3Jkb25uYW5jZVxTaG93RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/mathk/Desktop/AP2/newEmpty/Views/Patient/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
