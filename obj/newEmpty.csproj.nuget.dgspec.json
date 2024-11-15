@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mathk\\Desktop\\AP2\\newEmpty\\newEmpty.csproj": {}
+    "C:\\Users\\mathk\\Desktop\\AP2\\MedManager\\newEmpty\\newEmpty.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mathk\\Desktop\\AP2\\newEmpty\\newEmpty.csproj": {
+    "C:\\Users\\mathk\\Desktop\\AP2\\MedManager\\newEmpty\\newEmpty.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathk\\Desktop\\AP2\\newEmpty\\newEmpty.csproj",
+        "projectUniqueName": "C:\\Users\\mathk\\Desktop\\AP2\\MedManager\\newEmpty\\newEmpty.csproj",
         "projectName": "newEmpty",
-        "projectPath": "C:\\Users\\mathk\\Desktop\\AP2\\newEmpty\\newEmpty.csproj",
+        "projectPath": "C:\\Users\\mathk\\Desktop\\AP2\\MedManager\\newEmpty\\newEmpty.csproj",
         "packagesPath": "C:\\Users\\mathk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathk\\Desktop\\AP2\\newEmpty\\obj\\",
+        "outputPath": "C:\\Users\\mathk\\Desktop\\AP2\\MedManager\\newEmpty\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mathk\\AppData\\Roaming\\NuGet\\NuGet.Config",

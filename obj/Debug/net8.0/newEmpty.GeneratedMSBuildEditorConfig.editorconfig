@@ -9,139 +9,139 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = newEmpty
 build_property.RootNamespace = newEmpty
-build_property.ProjectDir = C:\Users\mathk\Desktop\AP2\newEmpty\
+build_property.ProjectDir = C:\Users\mathk\Desktop\AP2\MedManager\newEmpty\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\mathk\Desktop\AP2\newEmpty
+build_property.MSBuildProjectDirectory = C:\Users\mathk\Desktop\AP2\MedManager\newEmpty
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Account/Login.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Account/Logout.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Account/Register.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Allergie/Add.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Allergie/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Allergie/Edit.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Allergie/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Allergie/Index.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Allergie/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Allergie/Remove.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Allergie/Remove.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVcUmVtb3ZlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Allergie/ShowDetails.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Allergie/ShowDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVcU2hvd0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Antecedent/Add.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Antecedent/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW50ZWNlZGVudFxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Antecedent/Edit.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Antecedent/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW50ZWNlZGVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Antecedent/Index.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Antecedent/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW50ZWNlZGVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Antecedent/Remove.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Antecedent/Remove.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW50ZWNlZGVudFxSZW1vdmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Antecedent/ShowDetails.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Antecedent/ShowDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW50ZWNlZGVudFxTaG93RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Home/Index.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Medicament/Add.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Medicament/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudFxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Medicament/Edit.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Medicament/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Medicament/Index.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Medicament/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Medicament/Remove.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Medicament/Remove.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudFxSZW1vdmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Medicament/ShowDetails.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Medicament/ShowDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudFxTaG93RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Ordonnance/Add.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Ordonnance/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3Jkb25uYW5jZVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Ordonnance/Edit.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Ordonnance/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3Jkb25uYW5jZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Ordonnance/Index.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Ordonnance/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3Jkb25uYW5jZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Ordonnance/Remove.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Ordonnance/Remove.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3Jkb25uYW5jZVxSZW1vdmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Ordonnance/ShowDetails.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Ordonnance/ShowDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3Jkb25uYW5jZVxTaG93RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Patient/Add.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Patient/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Patient/Edit.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Patient/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Patient/Index.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Patient/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Patient/Remove.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Patient/Remove.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxSZW1vdmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Patient/ShowDetails.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Patient/ShowDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxTaG93RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/Shared/_Layout.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/_ViewImports.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mathk/Desktop/AP2/newEmpty/Views/_ViewStart.cshtml]
+[C:/Users/mathk/Desktop/AP2/MedManager/newEmpty/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,4 +1,4 @@
-@* @model IEnumerable<Medicament>
+@model IEnumerable<Medicament>
 @{
     <html>
 
@@ -17,8 +17,8 @@
                     <th></th>
                     <th scope="col">Medicament</th>
                     <th scope="col">Details</th>
-                    <th scope="col"> Retirer un profil</th>
-                    <th scope="col"> Modifier un profil </th>
+                    <th scope="col"> Retirer un médicament</th>
+                    <th scope="col"> Modifier un médicament </th>
                 </tr>
             </thead>
 
@@ -41,7 +41,7 @@
         </table>
 
         <div>
-            <button type="button" class="btn btn-dark">
+            <button type="button" class="btn btn-light">
                 <a asp-controller="Medicament" asp-action="Add"> Ajouter un médicament </a>
             </button>
         </div>
@@ -72,4 +72,4 @@
     </html>
 
 
-} *@
+}

@@ -1,0 +1,78 @@
+@model MedicamentViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajout</title>
+</head>
+
+<body>
+    <h1> Bienvenu dans l'espace pour ajouter un médicament </h1>
+
+    <form asp-action="AddConfirmed" asp-controller="Medicament" method="post">
+
+        <input asp-for="Medicament.MedicamentId" type="hidden" value="0" />
+
+        <div class="form-group">
+
+            <label asp-for="Medicament.Nom_med"></label>
+            <input asp-for="Medicament.Nom_med" class="form-control" />
+
+            <span asp-validation-for="Medicament.Nom_med" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+
+            <label asp-for="Medicament.Contre_indication"></label>
+            <input asp-for="Medicament.Contre_indication" class="form-control" />
+
+            <span asp-validation-for="Medicament.Contre_indication" class="text-danger"></span>
+        </div>
+
+        <div> Antécédents </div>
+        <div class="form-group">
+
+            @foreach (var antecedent in Model.Antecedents)
+            {
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="SelectedAntecedentIds"
+                        value="@antecedent.AntecedentId" @(Model.SelectedAntecedentIds != null &&
+                    Model.SelectedAntecedentIds.Contains(antecedent.AntecedentId) ? "checked" : "") />
+
+                    <label class="form-check-label">@antecedent.Nom_Antecedent</label>
+
+                </div>
+            }
+        </div>
+
+        <div> Allergies </div>
+        <div class="form-group">
+            @foreach (var allergie in Model.Allergies)
+            {
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="SelectedAllergieIds" value="@allergie.AllergieId"
+                    @(Model.SelectedAllergieIds != null && Model.SelectedAllergieIds.Contains(allergie.AllergieId) ?
+                        "checked" : "") />
+
+                    <label class="form-check-label">@allergie.Nom_Allergie</label>
+
+                </div>
+            }
+        </div>
+
+        <br />
+        <br />
+
+        <input type="submit" value="Créer nouveau médicament" class="btn btn-primary" />
+        <a asp-action="Index" type="button" class="btn btn-secondary">Retour</a> 
+    </form>
+
+    @* Permet de visualiser le resume de l'ensemble des erreurs de validation, ceci est un tag helper *@
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+</body>
+
+</html>

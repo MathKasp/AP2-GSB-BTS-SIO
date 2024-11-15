@@ -1,0 +1,72 @@
+@model MedicamentViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edit</title>
+    </head>
+
+    <body>
+        <h1 class="centrer">De quelle facon voulez vous editer ce médicament ?</center>?</h1>
+
+        <form asp-action="Edit" asp-controller="Medicament" method="post">
+            <div asp-validation-summary ="ModelOnly" class="text-danger"></div>
+            <input asp-for="Medicament.MedicamentId" type="hidden" />
+
+            <div class="form-group">
+                <label asp-for="Medicament.Nom_med"></label> 
+                <input asp-for="Medicament.Nom_med" class="form-control" />
+                <span asp-validation-for="Medicament.Nom_med" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Medicament.Contre_indication"></label> 
+                <input asp-for="Medicament.Contre_indication" class="form-control" />
+                <span asp-validation-for="Medicament.Contre_indication" class="text-danger"></span>
+            </div>
+
+            <div> Antécédents </div>
+            <div class="form-group">
+
+                @foreach (var antecedent in Model.Antecedents)
+                {
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="SelectedAntecedentIds" value="@antecedent.AntecedentId"
+                        @(Model.SelectedAntecedentIds != null && Model.SelectedAntecedentIds.Contains(antecedent.AntecedentId) ? "checked" : "") />
+
+                        <label class="form-check-label">@antecedent.Nom_Antecedent</label>
+
+                    </div>
+                }
+            </div>
+
+            <div> Allergies </div>
+            <div class="form-group">
+                @foreach (var allergie in Model.Allergies)
+                {
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="SelectedAllergieIds" value="@allergie.AllergieId"
+                        @(Model.SelectedAllergieIds != null && Model.SelectedAllergieIds.Contains(allergie.AllergieId) ? "checked" : "") />
+
+                        <label class="form-check-label">@allergie.Nom_Allergie</label>
+
+                    </div>
+                }
+            </div>
+
+            <br />
+            <br />
+            <div class="centrer">
+                <input type="submit" value="Valider les modifications" class="btn btn-primary" />
+                <input type="button" onclick="history.back()" value="Annuler" class="btn btn-secondary" />
+            </div>
+        </form>
+
+
+        @* Permet de visualiser le resume de l'ensemble des erreurs de validation, ceci est un tag helper *@
+        <div asp-validation-summary="All" class="text-danger"></div>
+    </body>
+</html>

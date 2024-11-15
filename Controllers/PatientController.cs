@@ -87,11 +87,7 @@ namespace newEmpty.Controllers
         [HttpGet]
         public IActionResult Remove(int id)
         {
-            // Avec l'id tu peux recuperer des infos du patient en base de donnees
             Patient? patient = _context.Patients.FirstOrDefault(s => s.PatientId == id);
-
-            // ou tu peux passer directement l'id du patient  a supprimer 
-
             return View(patient);
         }
 
@@ -129,8 +125,7 @@ namespace newEmpty.Controllers
                 return NotFound();
             }
 
-            // verifier si les allergies et/ou les antecedents sont nulls 
-
+            // verifier si les allergies et/ou les antecedents sont nulls
             var viewModel = new PatientViewModel
             {
                 Patient = patient,
